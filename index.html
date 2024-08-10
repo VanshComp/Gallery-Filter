@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Image Gallery with Filters</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <input type="text" id="search-bar" placeholder="Search images..." />
+                <div class="gallery-filter">
+                    <span class="filter-item active" data-filter="all">All</span>
+                    <span class="filter-item" data-filter="watch">Animal</span>
+                    <span class="filter-item" data-filter="headphone">Architecture</span>
+                    <span class="filter-item" data-filter="camera">Nature</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="gallery-item watch">
+                    <div class="gallery-item-inner">
+                        <img src="./images/Animals_01.jpg" alt="Animal Image 1" />
+                    </div>
+                </div>
+                <div class="gallery-item watch">
+                    <div class="gallery-item-inner">
+                        <img src="./images/Animals_02.jpg" alt="Animal Image 2" />
+                    </div>
+                </div>
+                <div class="gallery-item headphone">
+                    <div class="gallery-item-inner">
+                        <img src="./images/Architecture_01.jpg" alt="Architecture Image 1" />
+                    </div>
+                </div>
+                <div class="gallery-item headphone">
+                    <div class="gallery-item-inner">
+                        <img src="./images/Architecture_02.jpg" alt="Architecture Image 2" />
+                    </div>
+                </div>
+                <div class="gallery-item camera">
+                    <div class="gallery-item-inner">
+                        <img src="./images/Nature_01.jpg" alt="Nature Image 1" />
+                    </div>
+                </div>
+                <div class="gallery-item camera">
+                    <div class="gallery-item-inner">
+                        <img src="./images/Nature_02.jpg" alt="Nature Image 2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

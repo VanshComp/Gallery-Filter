@@ -1,0 +1,109 @@
+body {
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.gallery {
+    background-color: #333;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.gallery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#search-bar {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.gallery-filter {
+    text-align: center;
+}
+
+.filter-item {
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+.filter-item.active {
+    background-color: #16b5ef;
+    border-color: #16b5ef;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #333;
+}
+
+.gallery-item {
+        flex: 1 1 calc(33.333% - 30px); /* Flex basis adjusted to fit 3 items per row */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 1;
+        margin-bottom: 15px;
+    }
+
+.gallery-item-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery-item.hide {
+    opacity: 0;
+    transform: scale(0.95); /* Slightly scale down to give a subtle hide effect */
+    pointer-events: none; /* Prevent interaction */
+}
+
+.gallery-item.show {
+    opacity: 1;
+    transform: scale(1); /* Reset scale to normal */
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 30px); /* Two items per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%; /* One item per row on very small screens */
+    }
+}
